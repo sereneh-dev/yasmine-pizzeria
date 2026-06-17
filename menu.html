@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmine Pizzeria - Our Menu</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="menu-page-body">
+
+<header>
+    <div class="brand-logo-container" onclick="window.location.href='index.html'">
+        <img src="logo1.png" class="logo-image" alt="Logo">
+        <div class="brand-text">
+            <span class="main-title">YASMINE</span>
+            <span class="sub-title">PIZZERIA</span>
+        </div>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active-nav">Menu</a></li>
+            <li><a href="index.html">Why Us</a></li>
+            <li><a href="index.html">Reviews</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="menu-main-container">
+    
+    <div class="menu-search-wrapper">
+        <div class="search-box-inner">
+            <input type="text" id="searchInput" placeholder="Search our secret recipes..." onkeyup="filterMenu()">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <div class="menu-categories-nav">
+        <a href="#pizza" class="anchor-circle-item">
+            <div class="circle-icon">🍕</div>
+            <span class="circle-label">Pizza</span>
+        </a>
+        <a href="#salads" class="anchor-circle-item">
+            <div class="circle-icon">🥗</div>
+            <span class="circle-label">Salads</span>
+        </a>
+        <a href="#pasta" class="anchor-circle-item">
+            <div class="circle-icon">🍝</div>
+            <span class="circle-label">Pasta</span>
+        </a>
+        <a href="#drinks" class="anchor-circle-item">
+            <div class="circle-icon">🥤</div>
+            <span class="circle-label">Drinks</span>
+        </a>
+    </div>
+
+    <section class="menu-section">
+        
+        <div id="pizza" class="category-block">
+            <h2 class="category-heading">Pizzas</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="pizza1.jpg" alt="Margherita">
+                    <h3>Margherita Classica</h3>
+                    <p>Fresh artisan mozzarella, San Marzano tomatoes, organic basil, extra virgin olive oil.</p>
+                    <span class="price">12.99€</span>
+                </div>
+                <div class="menu-card">
+                    <img src="diavolo.webp" alt="Diavola">
+                    <h3>Diavola Piccante</h3>
+                    <p>Spicy Italian salami, mozzarella, chili flakes, infused hot honey drizzle.</p>
+                    <span class="price">14.50€</span>
+                </div>
+                <div class="menu-card">
+                    <img src="quattro.jpg" alt="Quattro Formaggi">
+                    <h3>Quattro Formaggi</h3>
+                    <p>A rich blend of Mozzarella, Gorgonzola, Parmesan, and creamy Fontina cheese.</p>
+                    <span class="price">15.00€</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="salads" class="category-block">
+            <h2 class="category-heading">Fresh Salads</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="vegeterian.jpg" alt="Caesar Salad">
+                    <h3>vegeterian Caesar Academica</h3>
+                    <p>Crisp romaine lettuce, garlic croutons, shaved parmesan, house-made Caesar dressing.</p>
+                    <span class="price">8.90€</span>
+                </div>
+                <div class="menu-card">
+                    <img src="C:\Users\Lenovo\Desktop\restaurant website\fattoush.jpg" alt="Mediterranean Salad">
+                    <h3>fattoush</h3>
+                    <p>Vine-ripened tomatoes, cucumbers, Kalamata olives, feta block, wild oregano.</p>
+                    <span class="price">9.50€</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="pasta" class="category-block">
+            <h2 class="category-heading">Signature Pastas</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="images.jpg" alt="Fettuccine Alfredo">
+                    <h3>Fettuccine Alfredo</h3>
+                    <p>Rich creamy parmesan sauce, tossed with perfectly al dente egg fettuccine.</p>
+                    <span class="price">13.99€</span>
+                </div>
+                <div class="menu-card">
+                    <img src="schnitzel.jpg" alt="Penne Arrabbiata">
+                    <h3>Schnitzel</h3>
+                    <p>Fiery tomato sauce cooked with fresh garlic, red chili, and Italian parsley.</p>
+                    <span class="price">11.50€</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="drinks" class="category-block">
+            <h2 class="category-heading">Refreshing Drinks</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="drinks.avif" alt="Coca Cola">
+                    <h3>Coca Cola</h3>
+                    <p>Classic refreshing soft drink served ice cold.</p>
+                    <span class="price">1.00€</span>
+                </div>
+                <div class="menu-card">
+                    <img src="drinks.avif" alt="Fanta">
+                    <h3>Fanta Orange</h3>
+                    <p>Bright, bubbly and burst of orange flavor</p>
+                    <span class="price">1.00€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

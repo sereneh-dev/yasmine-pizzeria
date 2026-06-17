@@ -1,125 +1,131 @@
 <html>
-    <head>
-        <title>Yasmine Pizzeria</title>
-        <link rel="stylesheet" href="css.css">
-    </head>
-    <body>
-        
-        <!--navbar-->
-        <header>
-              <div class="brand-logo-container">
-        <img src="logo1.png" alt="Yasmine Pizzeria Logo" class="logo-image">
-        
+<head>
+    <title>Yasmine Pizzeria</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<header>
+    <div class="brand-logo-container" onclick="window.location.href='#hero'">
+        <img src="logo1.png" class="logo-image">
         <div class="brand-text">
             <span class="main-title">YASMINE</span>
             <span class="sub-title">PIZZERIA</span>
         </div>
     </div>
-    
+
     <nav>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#categories">Menu</a></li>
+            <li><a href="menu.html">Menu</a></li>
             <li><a href="#why-choose-us">Why Us</a></li>
             <li><a href="#testimonials">Reviews</a></li>
         </ul>
     </nav>
-        </header>
+</header>
 
-        <!--hero-->
-        <section class="hero">
-            <h2>Pizza</h2>
-            <p>Fresh, Delicious, and made with love</p>
-            <button>Order Now</button>
-        </section>
+<!-- HERO -->
+<section class="hero" id="hero">
+    <img src="hero1.png" class="hero-img">
 
-        <!--Category circles-->
-    <section class="CategoryNavigation">
-        <h2 class="section-title"> Explore our Menu</h2>
-        <div class="circle-container">
+    <div class="hero-content">
+        <h2>Authentic Pizza</h2>
+        <p>Fresh, Delicious, Halal</p>
+        <button>Order Now</button>
+    </div>
+</section>
 
-            <!---- circle 1 pizza--->
-            <a href="#pizza" class="anchor-circle-item">
-                <div class="circle-icon">🍕</div>
-                <span class="circle-label">Pizza</span>
-            </a>
+<!-- CATEGORIES -->
+<section class="CategoryNavigation" id="categories">
+    <h2 class="section-title">Explore our Menu</h2>
 
-            <!--circle 2 pasta-->
-            <a href="#salad" class="anchor-circle-item">
-                <div class="circle-icon">🥗</div>
-                <span class="circle-label">Salads</span>
-            </a>
+    <div class="circle-container">
+        <a href="#pasta" class="anchor-circle-item">
+            <div class="circle-icon">🍕</div>
+            <span class="circle-label">Pizza</span>
+        </a>
 
-            <!--pasta-->
-            <a href="#pasta" class="anchor-circle-item">
-                <div class="circle-icon">🍝</div>
-                <span class="circle-label">Pasta</span>
-            </a>
+        <a href="#salad" class="anchor-circle-item">
+            <div class="circle-icon">🥗</div>
+            <span class="circle-label">Salads</span>
+        </a>
 
-            <!--Drinks-->
-            <a href="#drinks" class="anchor-circle-item">
-                <div class="circle-icon">🍹</div>
-                <span class="circle-label">Drinks</span>
-            </a>
+        <a href="#pasta" class="anchor-circle-item">
+            <div class="circle-icon">🍝</div>
+            <span class="circle-label">Pasta</span>
+        </a>
+
+        <a href="#drinks" class="anchor-circle-item">
+            <div class="circle-icon">🥤</div>
+            <span class="circle-label">Drinks</span>
+        </a>
+    </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured">
+    <h2>Featured Dishes</h2>
+    <div class="dish">Pizza Margherita</div>
+    <div class="dish">Pasta Alfredo</div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-choose-us">
+    <h2>Why Choose Us?</h2>
+
+    <div class="card-grid">
+        <div class="item-card core-feature">
+            <h3>Fresh Ingredients</h3>
+            <p>Prepared fresh daily using high-quality Italian ingredients</p>
         </div>
-    </section>
-    
-    <!--feature-->
-    <section class="featured">
-        <h2>featured dishes</h2>
-        <div class="dish">Pizza Margherita</div>
-        <div class="dish">Pasta Alfredo</div>
-    </section>
 
-    <!--why us-->
-    <section class="why-us">
-        <h2>Why Choose Us?</h2>
-        <div class="card-grid">
-            <div class="item-card core-feature">
-                <h3>fresh ingredients</h3>
-                <p>imported italian baseline ingredients prepapred fresh every single day</p>
-            </div>
-            <div class="item-card core feature">
-                <h3>fast delivery</h3>
-                <p>hot steaming pizzas brought directly across town safely</p>
-            </div>
-            </div>
-    </section>
+        <div class="item-card core-feature">
+            <h3>Fast Delivery</h3>
+            <p>Hot pizzas delivered quickly to your doorstep</p>
+        </div>
+    </div>
+</section>
 
-    <!--testimonials-->
-    <section class="testimonials">
-        <p>Best Pizza Ever!  ultra fast delivery, friendly personnel</p>
-        <span class="customer-name">Regular guest</span>
-    </section>
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+    <p>Best Pizza Ever! Ultra fast delivery and friendly staff</p>
+    <span class="customer-name">Regular Guest</span>
+</section>
 
-    <!--footer-->
-    <footer class="footer">
-        <div class="footerContainer">
-            <!--brand-->
-            <div class="footer-section">
-                <h3>Yasmine Pizzeria</h3>
-                <p>Authentic taste in Germany</p>
-            </div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footerContainer">
 
-            <!--contact us-->
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>Email=>yasminepizzeria@gmail.com</p><!--real email to be checked-->
-                <p>phone=>+49 5975 576</p><!--real nb-->
-                <p>Location=>Rheiener Str. 20A,48432 Rheine-Mesum, Germany</p><!--real location-->
-            </div>
+        <div class="footer-section">
+            <h3>Yasmine Pizzeria</h3>
+            <p>Authentic taste in Germany</p>
+        </div>
 
-            <!--social-->
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                 <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-                 <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-                 <a href="https://www.x.com/" target="_blank">X</a>
-                 <a href="https://www.youtube.com/" target="_blank">Youtube</a>
-                </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: yasminepizzeria@gmail.com</p>
+            <p>Phone: +49 5975 576</p>
+            <p>Location: Rheine, Germany</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">YouTube</a>
             </div>
         </div>
-    </footer>
-    </body>
+
+    </div>
+
+    <!--footer -->
+    <div class="footer-bottom">
+        <p>©Yasmine Pizzeria | All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
 </html>
