@@ -849,3 +849,200 @@ header {
             font-size: 26px;
 }
 }
+
+/*Task 3 About Us*/
+body{
+    font-family: 'segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding:0;
+    background-color: #fcf9f5;
+    color:#333333;
+    line-height: 1.6;
+}
+
+/*teaser*/
+.homepage-about-teaser{
+        text-align:center;
+        padding:40px 20px;
+        background-color:#ffffff; 
+        margin-top:20px; 
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}  
+.about-btn{
+       display:inline-block;
+       padding:12px 24px;
+       background-color: #ff9f43;
+       color:white;
+       text-decoration: none;
+       font-weight: bold;
+       border-radius:5px;
+       margin-top: 15px;
+       transition: background 0.3s;
+}
+about-btn:hover{
+    background-color:orange;
+}
+
+/*nav bar*/
+.navbar{
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+}
+.nav-container{
+    max-width:1100px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 20px;
+}
+.logo{
+    color: orange;
+    font: size 24px;
+    font-weight: bold;
+    text-decoration:none;
+}
+.nav-links{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a{
+    color: orange !important;
+    text-decoration:none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display:inline-block;
+}
+.nav-links a:hover{ 
+    color:white;
+    transform: scale(1.05);
+}
+.nav-links a.active{
+    color:orange;
+    border-bottom: 2px solid orange;
+    padding-bottom: 4px;
+}
+
+/*about layout container*/
+.about-container{
+    max-width:850px;
+    margin:40px auto;
+    padding: 0 20px;
+}
+
+/* hero header section*/
+.about-hero h1{
+    font-size:38px;
+    color:#2c3e50;
+    margin-bottom: 10px;
+}
+.tagline{
+    font-size: 18px;
+    font-style:italic;
+    color:#7f8c8d;
+}
+.section-divider{
+    border: 0;
+    height:1px;
+    background-color: #e0e0e0;
+    margin: 30px 0;
+}
+
+/*content cards*/
+.about-content{
+    display:flex;
+    flex-direction:column;
+    gap:30px
+}
+.about-card{
+    background-color: white;
+    padding: 30px;
+    border-radius:8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left:5px solid #ff9f43;
+    opacity:0;
+    animation:fadeInUp 1s ease-out forwards;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+}
+.about-card h2{
+    margin-top: 0;
+    color:#2c3e50;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.about-card p{
+    margin :0;
+    font-size : 16px;
+    color:#555555;
+    text-align: justify;
+}
+
+/*footer*/
+.footer{
+    text-align:center;
+    padding:20px 0;
+    background-color: #1a1a1a;
+    color:#ffffff;
+    margin-top: 60px;
+    font-size:14px;
+}
+/*trying creating animation*/
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{ opacity:1;
+    transform:translateY(0);
+}
+}
+/*applying it to the hero banner*/
+.about-hero{
+    text-align:center;
+    padding:20px 0;
+    animation:fadeInUp 0.8s ease-out forwards;
+}
+/*applying the animation to the story card*/
+.about-card{
+    background-color:#ffffff;
+    padding: 30px;
+    border-radius:8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    border-left: 5px solid #ff9f43;
+
+/*animation settings*/
+animation: fadeInUp 1s ease-out forwards;
+opacity: 0;
+
+/*prepare the card for the hover lift*/
+transition: transform 0.3s ease;
+            box-shadow: 0.3s ease;
+}
+
+/*popping the card 1 after another*/
+.about-card:nth-child(1){
+    animation-delay: 0.2s;
+}
+.about-card :nth-child(2){
+    animation-delay: 0.5s;
+}
+.about-card :nth-child(3){
+    animation-delay: 0.8s;
+}
+
+/*hovering the mouse over a block=>it floats*/
+.about-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
