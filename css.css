@@ -1351,7 +1351,7 @@ body{
 }
 
 
-/* 📱 COMPLETE CROSS-DEVICE MOBILE OPTIMIZATION */
+/* COMPLETE CROSS-DEVICE MOBILE OPTIMIZATION */
 @media (max-width: 650px) {
     .tower-container {
         gap: 25px; /* Adds breathing space for mobile tap modules */
