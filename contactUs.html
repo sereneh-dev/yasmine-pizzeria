@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>ContactUs</title>
+        <link rel="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div clas="nav-container">
+                <a href="index.html" class="logo">Yasmine Pizzeria</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contactUs.html" class="active">Contact Us</a></li>
+                     <li><a href="index.html#why-choose-us">Why Us</a></li>
+                     <li><a href="index.html#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="contact-main-wrapper">
+            <div class="contact-layout">
+                <section class="form-section-box">
+                    <h2>Send us a Message</h2>
+                    <p>Have questions? Drop us a line</p>
+                
+                    <form action="#" class="pizzacontactform">
+                        <div class="input-group">
+                            <label for="username">Name *</label>
+                            <input type="text" id="username" name="username" placeholder="Full Name" required>
+                        </div>
+
+                         <div class="input-group">
+                            <label for="useremail">Email A ddress *</label>
+                            <input type="email" id="useremail" name="useremail" placeholder="name@gmail.com" required>
+                        </div>
+                         <div class="input-group">
+                            <label for="msgSubject">Subject *</label>
+                            <input type="text" id="msgSubject" name="message" placeholder="How can we help?" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="userMessage">Message *</label>
+                            <textarea ide="userMessage" rows="5" placeholder="write the message here" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-form-btn">Submit Message</button> 
+                    </form>
+                </section>
+
+                <section class="info-section-box">
+                    <h2>Get in Touch</h2>
+
+                    <div class="info-details">
+                        <p><strong>Address: </strong>Rheiner Str. 20A, 48432 Rheine-Mesum, Germany</p>                      
+                        <p><strong>Phone Number: </strong><a href="tel:+495975576">+49 5975 576</a> </p>
+                        <p><strong>Email Adddress: </strong><a href="mailto:info@pizzeria-yasmine.de.">info@pizzeria-yasmine.de.</a></p>
+                    </div>
+
+                    <hr class="section-divider">
+                    <div class="map-container-box">
+                        <iframe
+                         src="https://www.google.com/maps/embed?pb=!4v1781865421029!6m8!1m7!1sulMHzGLJhBeI8dFoG_u9vA!2m2!1d52.2298998544836!2d7.491247652067067!3f85.00331!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footerContainer">
+                <div class="footer-section">
+                    <h3>Pizzeria Yasmine</h3>
+            <p>&copy; Yasmine Pizzeria. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
