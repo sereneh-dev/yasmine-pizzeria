@@ -21,7 +21,9 @@
             <li><a href="menu.html">Menu</a></li>
             <li><a href="#why-choose-us">Why Us</a></li>
             <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>     
+            <li><a href="contactUs.html">Contact Us</a></li>
+
         </ul>
     </nav>
 </header>
@@ -33,36 +35,132 @@
     <div class="hero-content">
         <h2>Authentic Pizza</h2>
         <p>Fresh, Delicious, Halal</p>
-        <button>Order Now</button>
+        <button onclick="window.location.href='menu.html'">Order Now</button>
     </div>
 </section>
 
+<!--3d pizza tower-->
+<section class="pizza-tower-section">
+    <h2 class="tower-title">🍕 Yasmine's Fresh Delivery Tower</h2>
+    <p class="tower-subtitle">Hover on computer or tap a box below to slide it open and look inside</p>
+
+    <!--main wrapper holding-->
+    <div class="tower-container">
+
+        <!--box 1-->
+        <div class="tower-layer">
+
+            <!--checkbox handling the mobile click toggles-->
+            <input type="checkbox" id="tower-box-1" class="tower-trigger">
+            <label for="tower-box-1" class="cardboard-box">
+
+                <!--what people see when the box is closed-->
+                <div class="box-closed-face">
+                    <span class="box-number">1</span>
+                    <h3>Pizza Margherita</h3>
+                    <span class="pull-indicator">Pull=></span>
+                </div>
+
+                <!--the secret inside drawer-->
+                <div class="box-open-drawer">
+                    <h4>Classic Margherita</h4>
+                    <p>Authentic Sauce, fresh mozarella chunks, and fresh garden basil leaves</p>
+                    <div class="drawer-footer">
+                        <span class="tower-price">12.99$</span>
+                        <a href="menu.html#pizza" class="action-tag">Order Now</a>
+                    </div>
+                </div>
+            </label>
+            <!--End of box 1-->
+        </div> 
+        <!--Pizza box 2-->
+         <div class="tower-layer">
+
+            <!--checkbox handling the mobile click toggles-->
+            <input type="checkbox" id="tower-box-2" class="tower-trigger">
+            <label for="tower-box-2" class="cardboard-box">
+
+                <!--what people see when the box is closed-->
+                <div class="box-closed-face">
+                    <span class="box-number">2</span>
+                    <h3>Pasta Alfredo</h3>
+                    <span class="pull-indicator">Pull=></span>
+                </div>
+
+                <!--the secret inside drawer-->
+                <div class="box-open-drawer">
+                    <h4>Garlic Alfredo Fettuchini</h4>
+                    <p>Rich, velvety cream sauce tossed with real parmesan cheese and buttered  garlic noodles</p>
+                    <div class="drawer-footer">
+                        <span class="tower-price">14.45$</span>
+                        <a href="menu.html#pasta" class="action-tag">Order Now</a>
+                    </div>
+                </div>
+            </label>
+            <!--End of box 2-->
+        </div> 
+
+        <!--Pizza box 3-->
+         <div class="tower-layer">
+
+            <!--checkbox handling the mobile click toggles-->
+            <input type="checkbox" id="tower-box-3" class="tower-trigger">
+            <label for="tower-box-3" class="cardboard-box">
+
+                <!--what people see when the box is closed-->
+                <div class="box-closed-face">
+                    <span class="box-number">3</span>
+                    <h3>Yasmine special salad</h3>
+                    <span class="pull-indicator">Pull=></span>
+                </div>
+
+                <!--the secret inside drawer-->
+                <div class="box-open-drawer">
+                    <h4>Mediterranean House Salad</h4>
+                    <p>crisp romain, Kalamata olives, feta cheese chunks, and our secret balsamic drizzle</p>
+                    <div class="drawer-footer">
+                        <span class="tower-price">10$</span>
+                        <a href="menu.html#salad" class="action-tag">Order Now</a>
+                    </div>
+                </div>
+            </label>
+         </div>
+    </div>
+</section>
+
+<!--2 columns -->
+<div class="menu-featured-wrapper">
 <!-- CATEGORIES -->
 <section class="CategoryNavigation" id="categories">
     <h2 class="section-title">Explore our Menu</h2>
 
     <div class="circle-container">
-        <a href="#pasta" class="anchor-circle-item">
+        <!--pizza circle-->
+        <a href="menu.html#pizza" class="anchor-circle-item">
             <div class="circle-icon">🍕</div>
             <span class="circle-label">Pizza</span>
         </a>
-
-        <a href="#salad" class="anchor-circle-item">
+        
+        <!--salad circle-->
+        <a href="menu.html#salad" class="anchor-circle-item">
             <div class="circle-icon">🥗</div>
             <span class="circle-label">Salads</span>
         </a>
 
-        <a href="#pasta" class="anchor-circle-item">
+        <!--pasta circle-->
+        <a href="menu.html#pasta" class="anchor-circle-item">
             <div class="circle-icon">🍝</div>
             <span class="circle-label">Pasta</span>
         </a>
 
-        <a href="#drinks" class="anchor-circle-item">
+        <!--drinks circle-->
+        <a href="menu.html#drinks" class="anchor-circle-item">
             <div class="circle-icon">🥤</div>
             <span class="circle-label">Drinks</span>
         </a>
     </div>
 </section>
+
 
 <!-- FEATURED -->
 <section class="featured">
@@ -70,29 +168,62 @@
     <div class="dish">Pizza Margherita</div>
     <div class="dish">Pasta Alfredo</div>
 </section>
+</div>
 
 <!-- WHY US -->
-<section class="why-us" id="why-choose-us">
+<section class="why-us-section" id="why-choose-us">
     <h2>Why Choose Us?</h2>
 
-    <div class="card-grid">
-        <div class="item-card core-feature">
+    <div class="why-us-grid">
+        <!--card 1-->
+        <div class="why-card">
+            <div class="why-icon">🌾</div>
             <h3>Fresh Ingredients</h3>
             <p>Prepared fresh daily using high-quality Italian ingredients</p>
         </div>
 
-        <div class="item-card core-feature">
+        <!--card 2-->
+        <div class="why-card">
+            <div class="why-icon">🚀</div>
             <h3>Fast Delivery</h3>
             <p>Hot pizzas delivered quickly to your doorstep</p>
         </div>
+
+        <!--card 3-->
+        <div class="why-card">
+            <div class="why-icon">🍅</div>
+        <h3>The Secret Sauce</h3>
+        <p> we exclusively use fresh TOMATOES imported directly from Italy blended
+        with fresh garden herbs</p>
     </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
+<section class="reviews-section" id="testimonials">
+    <h2 class="section-main-title">What Our Guests Say</h2>
+    <p class="section-subtitle">Real feedback from our regular community members</p>
+
+    <!--layout grid wrapper review bubble-->
+    <div class="reviews-grid">
+
+        <!--review 1-->
+        <div class="review-bubble">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">That pizza Margharita from the interactive delivery tower is insane.
+                The crust has perfect charred flavor spots</p>
+                <h4 class="reviewer-name">Sarah.M</h4>
+        </div>
+    </div>
+
+        <!--review 2-->
+    <div class="review-bubble">
+        <div class="stars">⭐⭐⭐⭐⭐
     <p>Best Pizza Ever! Ultra fast delivery and friendly staff</p>
-    <span class="customer-name">Regular Guest</span>
+    <h4 class="reviewer-name">Nino</h4>
+         </div>
+    </div>
 </section>
+
 
 <!--our story-->
 <section class="homepage-about-teaser">
@@ -102,39 +233,45 @@
     <a href="about.html" class="about-btn">Read Our Story</a>
 </section>
 
+
 <!-- FOOTER -->
 <footer class="footer">
+
+
+    <!--3 blocks top columns-->
     <div class="footerContainer">
 
+        <!--left block brand-->
         <div class="footer-section">
             <h3>Yasmine Pizzeria</h3>
             <p>Authentic taste in Germany</p>
         </div>
 
+        <!--clickable contain items-->
         <div class="footer-section">
             <h4>Contact Us</h4>
-            <p>Email: yasminepizzeria@gmail.com</p>
-            <p>Phone: +49 5975 576</p>
+            <p><a href="mailto:info@pizzeria-yasmine.de.">Email: info@pizzeria-yasmine.de.</a></p>
+            <p><a href="tel:+49 5975 576">tel: +49 5975 576</a></p>
             <p>Location: Rheine, Germany</p>
         </div>
 
+        <!--right block social media-->
         <div class="footer-section">
             <h4>Follow Us</h4>
             <div class="social-icons">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">X</a>
-                <a href="#">YouTube</a>
+                <a href="https://www.facebook.com/PizzaYasmine/about/">Facebook</a>
+                <a href="https://www.instagram.com/pizzeria_yasmine/">Instagram</a>
+                <a href="https://x.com">X</a>
+                <a href="https://www.youtube.com">YouTube</a>
             </div>
         </div>
-
+        <!--end of top footer-->
     </div>
 
-    <!--footer -->
+    <!--bottom bar copy right data-->
     <div class="footer-bottom">
         <p>©Yasmine Pizzeria | All Rights Reserved</p>
     </div>
 </footer>
-
 </body>
 </html>

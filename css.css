@@ -148,7 +148,18 @@ header{
 }
 
 /*CATEGORY*/
+.menu-featured-wrapper{
+    display:flex;
+    justify-content: center;
+    gap:50px;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 60px 20px;
+    background:floralwhite;
+    border-radius:12px;
+
 .CategoryNavigation{
+    flex:1;
     text-align:center;
     padding:60px 20px;
     background:floralwhite;
@@ -166,7 +177,7 @@ header{
     flex-wrap:wrap;
 }
 
-.CategoryNavigation.anchor-circle-item{
+.CategoryNavigation .anchor-circle-item{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -220,7 +231,7 @@ header{
     max-width:400px;
     box-shadow:0 2px 5px lightgray;
 }
-
+}
 
 /* WHY US*/
 .why-us-section{
@@ -231,7 +242,7 @@ header{
 .section-main-title{
     font-size: 28px;
     color:#2c3e50;
-    margin-bottom: 700px;
+    margin-bottom: 30px;
     font-weight:700;
 }
 
@@ -291,7 +302,7 @@ header{
     text-align:center;
     font-style:italic;
 }
-.reviews-section .section-main-title{
+.reviews-section .section-subtitle{
     margin-bottom: 8px;
 }
 .reviews-section .section-subtitle{
@@ -352,7 +363,7 @@ header{
     margin: 0 auto;
 }
 .footer-section{
-    flex:1px;
+    flex:1;
     min-width:220px;
 }
 .footer-section h3,
@@ -440,7 +451,7 @@ header{
     text-align: center;
     gap: 25px;
 }
-.why-card, .review-bubble{
+.why-card, .reviews-bubble{
     width:100%;
     max-width:100%;
 }
@@ -990,7 +1001,7 @@ body{
 }
 .logo{
     color: orange;
-    font: size 24px;
+    font-size: 24px;
     font-weight: bold;
     text-decoration:none;
 }
@@ -1147,7 +1158,7 @@ body{
 .contact-main-wrapper{
     padding: 60px 20px;
     background-color: whitesmoke;
-    min-height: calc(100vh-160px);
+    min-height: calc(100vh - 160px);
 }
 .contact-layout{
     max-width: 1100px;
@@ -1222,11 +1233,145 @@ body{
    width:100%;
    overflow:hidden;
    border-radius: 8px;
-   box-shadow: 0 4px 12px Transparent Black;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
  }
  .map-container-box iframe{
     display:block;
     width:100%;
     height:250px;
-
  }
+ 
+ /*==================================================*/
+/* The 3D Pizza Delivery Tower Feature Styles       */
+
+.pizza-tower-section {
+    padding: 80px 20px;
+    background-color: #1a1a1a; /* Dark charcoal room backdrop makes the brown boxes pop */
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tower-title { font-size: 30px; color: #ff9f43; margin-bottom: 6px; }
+.tower-subtitle { color: #888; margin-bottom: 50px; font-size: 14px; }
+
+/* The Core Stack Column */
+.tower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Kept tight so they look genuinely stacked */
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tower-trigger {
+    display: none; /* Completely invisible mechanics switch */
+}
+
+/* THE BOX CONTAINER MACHINERY */
+.cardboard-box {
+    display: flex;
+    width: 320px;
+    height: 90px;
+    background-color: #d2b48c; /* Kraft Cardboard Paper Brown */
+    border: 3px solid #b8976c;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    user-select: none;
+}
+
+/* CLOSED FACE (The visible edge of the box in the stack) */
+.box-closed-face {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: #4a2700;
+}
+.box-number { font-weight: 900; font-size: 24px; opacity: 0.3; }
+.box-closed-face h3 { margin: 0; font-size: 18px; font-weight: 700; flex-grow: 1; text-align: left; margin-left: 15px; }
+.pull-indicator { font-size: 12px; font-weight: bold; background: rgba(0,0,0,0.07); padding: 4px 10px; border-radius: 4px; }
+
+/* OPEN DRAWER CONTENT (Hidden behind/inside the box profile) */
+.box-open-drawer {
+    position: absolute;
+    top: -3px; left: 0;
+    width: 100%; height: 100%;
+    background: white;
+    border: 3px solid #ff9f43;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+.box-open-drawer h4 { margin: 0; color: #2c3e50; font-size: 16px; }
+.box-open-drawer p { margin: 5px 0; color: #7f8c8d; font-size: 12px; line-height: 1.3; }
+.drawer-footer { display: flex; justify-content: space-between; align-items: center; }
+.tower-price { font-weight: bold; color: #ff9f43; font-size: 16px; }
+.action-tag { font-size: 11px; background: #4cd137; color: white; padding: 2px 8px; border-radius: 3px; font-weight: bold; }
+
+
+/* 🚀 THE DRAWER INTERACTIVE SLIDE ENGINE (Hover & Touch Mobile Tap Compatible) */
+.tower-layer:hover .cardboard-box,
+.tower-trigger:checked + .cardboard-box {
+    width: 580px; /* Box expands open outward to the right side */
+    background-color: #c9a77c;
+}
+
+.tower-layer:hover .box-open-drawer,
+.tower-trigger:checked + .cardboard-box .box-open-drawer {
+    opacity: 1;
+    pointer-events: all;
+    left: 240px; /* Moves smoothly out of the cardboard sleeve layout */
+    width: 340px;
+    height: 140px; /* Drops slightly open for visual aesthetic depth */
+    top: -25px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.tower-layer:hover .pull-indicator,
+.tower-trigger:checked + .cardboard-box .pull-indicator {
+    opacity: 0; /* Hides the prompt indicator when active */
+}
+
+
+/* 📱 COMPLETE CROSS-DEVICE MOBILE OPTIMIZATION */
+@media (max-width: 650px) {
+    .tower-container {
+        gap: 25px; /* Adds breathing space for mobile tap modules */
+    }
+    
+    /* Modify layout direction on small phones so it doesn't break out horizontally */
+    .tower-layer:hover .cardboard-box,
+    .tower-trigger:checked + .cardboard-box {
+        width: 300px;
+        height: 240px; /* Grows downward instead of outward */
+    }
+
+    .tower-layer:hover .box-open-drawer,
+    .tower-trigger:checked + .cardboard-box .box-open-drawer {
+        left: -3px;
+        top: 80px; /* Pops out directly below the box line label */
+        width: 300px;
+        height: 160px;
+    }
+}
+
+
+ 
