@@ -1370,7 +1370,108 @@ body{
         top: 80px; /* Pops out directly below the box line label */
         width: 300px;
         height: 160px;
+    }   
+}
+
+ /* task 5 responsiveness on every device*/
+ @media screen and (max-width:768px){
+    /*nav header for all pages*/
+    header{
+        flex-direction:column !important;
+        gap:15px;
+        text-align:center;
+        padding:15px 20px;
     }
+    .about-cards-container, .contact-layout{
+        grid-template-columns: 1fr;
+    }
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        padding:0;
+    }
+    /*home page*/
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+    }
+    .hero-content h2{
+        font-size:32px !important;
+    }
+    .tower-container{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .why-us-grid, .reviews-grid, .footerContainer{
+        flex-direction:column !important;
+        align-items:center;
+        text-align:center;
+        gap:25px;
+    }
+    .why-card, .reviews-bubble{
+        width:100% !important;
+        max-width:100% !important;
+    }
+    /*menu page sticky bar and grid adjustments*/
+    .menu-featured-wrapper{
+        flex-direction: column;
+        gap:35px;
+        padding: 40px 15px;
+    }
+    .CategoryNavigation, .featured{
+        width:100%;
+    }
+    .CategoryNavigation .circle-icon{
+        width: 65px;
+        height:65px;
+    }
+    .menu-categories-nav{
+        position:static !important;/*fluid page scrolling*/
+        flex-wrap:wrap;
+        gap: 15px;
+        padding:15px;
+    }
+    .menu-categories-nav .circle-icon{
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 22px !important;/*preventing screen oveflowing*/
+    }
+    .menu-grid{
+        grid-template-columns: 1fr !important; /*remap pizza listings*/
+        gap: 20px;
+        padding: 0 10px;
+    }
+    /*about us page*/
+    .about-content{
+        display: flex;
+        flex-direction:column;
+        gap:20px;
+        padding:10px;
+    }
+    /*contact us page*/
+    .contact-layout{
+        grid-template-columns: 1fr !important;/*to maximize readable space*/
+        gap: 35px;
+    }
+    .form-section-box, .info-section-box{
+        padding: 20px 15px !important;
+    }
+
+    /*ultra small mobile displays*/
+    @media screen and (max-width: 480px){
+        .main-title{
+            font-size: 18px !important;
+        }
+        .hero-content p{
+            font-size: 14px !important ;
+        }
+        .category-heading{
+            font-size: 26px !important;/*balances text sizing choices for narrow viewports*/
+        }
+    }
+
 }
 
 
